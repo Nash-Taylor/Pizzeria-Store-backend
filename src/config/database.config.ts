@@ -8,5 +8,5 @@ export const databaseConfig: SequelizeModuleOptions = {
   password: 'postgres',
   database: 'pizzastore',
   autoLoadModels: true,
-  synchronize: true,
+  synchronize: true, // Be careful with this in production
 }; 
