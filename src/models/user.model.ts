@@ -38,13 +38,20 @@ export class User extends Model {
 
   @Column({
     type: DataType.STRING,
+    allowNull: false,
     validate: {
-      len: [10, 20]
+      is: /^\+?[1-9]\d{1,14}$/
     }
   })
   phone: string;
 
-  @Column(DataType.TEXT)
+  @Column({
+    type: DataType.TEXT,
+    allowNull: false,
+    validate: {
+      len: [5, 500]
+    }
+  })
   address: string;
 
   @HasMany(() => Cart)

@@ -9,4 +9,5 @@ export const databaseConfig: SequelizeModuleOptions = {
   database: 'pizzastore',
   autoLoadModels: true,
   synchronize: true, // Be careful with this in production
+  logging: true, // Enable logging for debugging
 }; 
