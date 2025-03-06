@@ -10,6 +10,8 @@ import { Cart } from './models/cart.model';
 import { Order } from './models/order.model';
 import { IngredientsModule } from './ingredients/ingredients.module';
 import { AuthModule } from './auth/auth.module';
+import { OrderModule } from './orders/orders.module';
+import { CartModule } from './cart/cart.module';
 
 @Module({
   imports: [
@@ -22,6 +24,8 @@ import { AuthModule } from './auth/auth.module';
     }),
     IngredientsModule,
     AuthModule,
+    OrderModule,
+    CartModule,
   ],
   controllers: [AppController],
   providers: [AppService],

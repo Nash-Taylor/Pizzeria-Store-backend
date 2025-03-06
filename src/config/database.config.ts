@@ -8,6 +8,6 @@ export const databaseConfig: SequelizeModuleOptions = {
   password: 'postgres',
   database: 'pizzastore',
   autoLoadModels: true,
-  synchronize: true, // Be careful with this in production
-  logging: true, // Enable logging for debugging
+  sync: { alter: true }, // This will update tables without dropping them
+  logging: true,
 }; 
